@@ -25,21 +25,20 @@ class MainActivity : AppCompatActivity() {
 
 
 //          2.  두 변수를 갖고 조건문 활용
+//            id : admin / pw : qwer 두개가 다 맞아야 로그인 성공 - AND!!!
 
-            if (typeID = admin) {
+            if (inputId == "admin" && inputPw == "qwer") {
+//                 관리자입니다. 토스트
 
-                Log.d("", "관리자입니다")
+                Toast.makeText(this, "관리자입니다.", Toast.LENGTH_SHORT).show()
+            }
+                
+
+            else{
+                Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
             }
 
-            if (typePw = qwer) {
 
-                Log.d("", "로그인에 실패했습니다")
-
-            }
-
-
-
-            Toast.makeText(this, "토스트버", Toast.LENGTH_SHORT).show()
 
         }
 
